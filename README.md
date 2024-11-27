@@ -59,3 +59,6 @@ Edge: `User Configuration > Administrative Templates > Microsoft Edge > Extensio
     </app>
 </gupdate>
 ```
+
+Below is a link to a guide that I think was invaluable to my development and ensuring the extension updated properly via the group policy.
+https://reece.tech/posts/enterprise-chrome-extension/
