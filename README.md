@@ -2,6 +2,8 @@
 
 A chromium extension that provides a pop-up when a user visits an AI website like ChatGPT or Claude.
 
+![Screenshot 2024-11-28 094245](https://github.com/user-attachments/assets/b53c99ad-27af-4fa1-ad19-e97c12012929)
+
 ## Getting started
 
 The method of installing this extension will vary depending on your use-case, but for the Swan Hill Rural City Council, we enforced using these two methods:
