@@ -31,17 +31,17 @@ Edge: `User Configuration > Administrative Templates > Microsoft Edge > Extensio
 
 ### Local Setup
 
-1. Download this extension
-2. Unzip the extension
+1. Create a fork of this repository
+2. Clone the forked repository to your local machine
 3. Open the browser and navigate to `chrome://extensions` or `edge://extensions` if you are using Edge
 4. Enable Developer Mode
-5. Click on `Load Unpacked` and select the unzipped extension folder
+5. Click on `Load Unpacked` and select the forked repository folder
 6. The extension should now be installed
 
 ### Organisation Setup
 
-1. Download this extension
-2. Unzip the extension
+1. Create a fork of this repository
+2. Clone the forked repository to your local machine
 3. Pack the extension using any Chromium-based browser, save the `.crx` file as `ai-popup-chromium-extension.crx`
 4. Save the below XML file as `ai-popup-chromium-extension.xml`
 5. Update the XML file with the correct values
