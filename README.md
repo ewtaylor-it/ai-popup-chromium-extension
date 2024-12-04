@@ -20,13 +20,13 @@ We enforced the following group policy settings:
 Chrome: `User Configuration > Administrative Templates > Google > Google Chrome > Extensions`:
 
 - [ExtensionInstallAllowlist](https://chromeenterprise.google/policies/?policy=ExtensionInstallAllowlist): `Enabled` with the value `{extension_id}`
-- [ExtensionInstallForcelist](https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist): `Enabled` with the value `{extension_id};https://{web_server}/vic-local-gov-ai-pop-up-chromium-extension.xml`
+- [ExtensionInstallForcelist](https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist): `Enabled` with the value `{extension_id};https://{web_server}/ai-popup-chromium-extension.xml`
 - [ExtensionInstallSources](https://chromeenterprise.google/policies/?policy=ExtensionInstallSources): `Enabled` with the value `https://{web_server}/*`
 
 Edge: `User Configuration > Administrative Templates > Microsoft Edge > Extensions`:
 
 - [ExtensionInstallAllowlist](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#extensioninstallallowlist): `Enabled` with the value `{extension_id}`
-- [ExtensionInstallForcelist](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#extensioninstallforcelist): `Enabled` with the value `{extension_id};https://{web_server}/vic-local-gov-ai-pop-up-chromium-extension.xml`
+- [ExtensionInstallForcelist](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#extensioninstallforcelist): `Enabled` with the value `{extension_id};https://{web_server}/ai-popup-chromium-extension.xml`
 - [ExtensionInstallSources](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#extensioninstallsources): `Enabled` with the value `https://{web_server}/*`
 
 ### Local Setup
@@ -42,8 +42,8 @@ Edge: `User Configuration > Administrative Templates > Microsoft Edge > Extensio
 
 1. Download this extension
 2. Unzip the extension
-3. Pack the extension using any Chromium-based browser, save the `.crx` file as `vic-local-gov-ai-pop-up-chromium-extension.crx`
-4. Save the below XML file as `vic-local-gov-ai-pop-up-chromium-extension.xml`
+3. Pack the extension using any Chromium-based browser, save the `.crx` file as `ai-popup-chromium-extension.crx`
+4. Save the below XML file as `ai-popup-chromium-extension.xml`
 5. Update the XML file with the correct values
 6. Save both files to a publicly accessible web server
 7. Create a group policy that enforces the above settings, and assign it to the devices you want the extension to be installed on
@@ -57,7 +57,7 @@ Edge: `User Configuration > Administrative Templates > Microsoft Edge > Extensio
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns="http://www.google.com/update2/response" protocol="2.0">
     <app appid='{extension id}'>
-        <updatecheck codebase='https://{web_server}/vic-local-gov-ai-pop-up-chromium-extension.crx' version='1.0.0' />
+        <updatecheck codebase='https://{web_server}/ai-popup-chromium-extension.crx' version='1.0.0' />
     </app>
 </gupdate>
 ```
