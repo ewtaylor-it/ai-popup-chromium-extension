@@ -3,6 +3,35 @@
  * The content script displays a pop-up warning message to the user.
  */
 
+const targetHostUrl =
+  "https://raw.githubusercontent.com/ewtaylor-it/ai-popup-chromium-extension/main/target-hosts.json";
+
+var getJSON = function (url, callback) {
+  /**
+   * Fetches the JSON data from the specified URL and calls the callback function with the data or an error.
+   */
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      return response.json();
+    })
+    .then((data) => callback(null, data))
+    .catch((error) => callback(error, null));
+};
+
+let targetHosts = [];
+
+getJSON(targetHostUrl, function (err, data) {
+  if (err !== null) {
+    console.log(`Error: ${err}`);
+  } else {
+    targetHosts = data;
+    console.log("Target hosts loaded: " + targetHosts);
+  }
+});
+
 // Object to keep track of warned tabs during the session
 const warnedTabs = {};
 
