@@ -1,25 +1,7 @@
-// List of hosts where the pop-up should appear
-const targetHosts = [
-  // Add the domains here (e.g., "example.com", "anotherdomain.com")
-  "chatgpt.com",
-  "chat-sonic.ai",
-  "chat.writesonic.com", //unsure
-  "claude.ai",
-  "copy.ai",
-  "www.meta.ai",
-  "ai.meta.com",
-  "grammarly.com",
-  "huggingface.co",
-  "www.jasper.ai",
-  "neuroflash.com",
-  "app.neuroflash.com",
-  "poe.com",
-  "scribehow.com",
-  "quillbot.com",
-  "www.wordtune.com",
-  "gemini.google.com",
-  "copilot.microsoft.com",
-];
+/**
+ * This script listens for completed navigation events and injects a content script into the tab if the host is in the target list.
+ * The content script displays a pop-up warning message to the user.
+ */
 
 // Object to keep track of warned tabs during the session
 const warnedTabs = {};
