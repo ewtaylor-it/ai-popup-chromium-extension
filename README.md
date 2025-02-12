@@ -51,16 +51,6 @@ Edge: `User Configuration > Administrative Templates > Microsoft Edge > Extensio
 
 **Disclaimer** - I am under the assumption that publicly-accessible just means that the web server is accessible to the devices that the group policy is enforced on. I have not tested this with a server only available by VPN for example, but I assume it would still work.
 
-### JSON Setup
-
-The websites that will be detected are stored in a JSON file called `target-hosts.json`.
-
-You can quite easily change the JSON file to better suit your organisation, but note that by default the extension will try to fetch the JSON file directly from this repository, only referring to the local copy if that fails. Bypassing this is fairly straight-forward:
-
-1. Open the `background.js` file
-2. Change the `targetHostUrl` variable to `null`, then save the file
-3. Now, it will always refer to the local copy of the JSON file
-
 #### XML File
 
 ```xml
@@ -74,3 +64,13 @@ You can quite easily change the JSON file to better suit your organisation, but 
 
 Below is a link to a guide that I think was invaluable to my development and ensuring the extension updated properly via the group policy.
 <https://reece.tech/posts/enterprise-chrome-extension/>
+
+### JSON Setup
+
+The websites that will be detected are stored in a JSON file called `target-hosts.json`.
+
+You can quite easily change the JSON file to better suit your organisation, but note that by default the extension will try to fetch the JSON file directly from this repository, only referring to the local copy if that fails. Bypassing this is fairly straight-forward:
+
+1. Open the `background.js` file
+2. Change the `targetHostUrl` variable to `null`, then save the file
+3. Now, it will always refer to the local copy of the JSON file
