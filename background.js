@@ -11,15 +11,32 @@ var getJSON = function (url, callback) {
   /**
    * Fetches the JSON data from the specified URL and calls the callback function with the data or an error.
    */
-  fetch(url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(response.statusText);
-      }
-      return response.json();
-    })
-    .then((data) => callback(null, data))
-    .catch((error) => callback(error, null));
+  if (url === null || url === undefined) {
+    console.log("Defaulting to local target hosts");
+
+    // Read the local target hosts file
+    fetch(chrome.runtime.getURL("target-hosts.json"))
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then((data) => callback(null, data))
+      .catch((error) => callback(error, null));
+  } else {
+    console.log("Fetching target hosts from URL: " + url);
+
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then((data) => callback(null, data))
+      .catch((error) => callback(error, null));
+  }
 };
 
 let targetHosts = [];
