@@ -6,6 +6,7 @@
 const targetHostUrl =
   "https://raw.githubusercontent.com/ewtaylor-it/ai-popup-chromium-extension/main/target-hosts.json";
 
+/* https://stackoverflow.com/questions/12460378/how-to-get-json-from-url-in-javascript */
 var getJSON = function (url, callback) {
   /**
    * Fetches the JSON data from the specified URL and calls the callback function with the data or an error.
