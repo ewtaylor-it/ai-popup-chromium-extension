@@ -152,15 +152,8 @@ When you add new features or change existing ones, please also update:
 If you have any questions or need clarification:
 
 - Open an [Issue](https://github.com/ewtaylor-it/ai-popup-chromium-extension/issues) or [Discussion](https://github.com/ewtaylor-it/ai-popup-chromium-extension/discussions).  
-- Tag project maintainers in your issue or pull request for quicker responses.
+- Tag a project maintainer in your issue or pull request for quicker responses.
 
 We appreciate your time and contributions!
 
 > Thank you for helping to improve the AI Pop-Up Chromium Extension. Your efforts make this project stronger and more useful for everyone.
-
----
-
-<!-- Replace these placeholder links with the actual URLs for your repository, if available -->
-[issues-link]: https://github.com/ewtaylor-it/ai-popup-chromium-extension/issues
-[discussions-link]: https://github.com/ewtaylor-it/ai-popup-chromium-extension/discussions
-[coc-link]: https://github.com/ewtaylor-it/ai-popup-chromium-extension/CODE_OF_CONDUCT.md
