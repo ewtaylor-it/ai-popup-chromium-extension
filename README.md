@@ -2,7 +2,7 @@
 
 A Chromium extension that detects when a user visits AI-related websites (such as ChatGPT or Claude) and displays a pop-up message.
 
-This repository contains all the code, resources, and documentation you need to install, configure, and maintain the extension for both personal and organizational use.
+This repository contains all the code, resources, and documentation you need to install, configure, and maintain the extension for both personal and organisational use.
 
 ![Screenshot 2024-11-28 094245](https://github.com/user-attachments/assets/b53c99ad-27af-4fa1-ad19-e97c12012929)
 
