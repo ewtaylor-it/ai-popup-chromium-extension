@@ -9,7 +9,7 @@ A chromium extension that provides a pop-up when a user visits an AI website lik
 The method of installing this extension will vary depending on your use-case, but for the Swan Hill Rural City Council, we enforced using these two methods:
 
 - Group Policy
-- Publicly Accessible Web Server
+- Publicly Accessible Web Server (Git Pages in our case)
 
 The idea is that the group policy will enforce the installation of the extension on all devices within the organisation, and the publicly accessible web server will host the metadata file that will allow the extension to be installed on the browser, and will host the extension itself.
 
